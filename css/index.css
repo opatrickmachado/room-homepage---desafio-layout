@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap");
+
+/* ===========================
+   🖥️ Configuração da Fonte Base
+=========================== */
+html {
+  --font-base: 100%;
+  font-size: var(--font-base);
+}
+
+@media (max-width: 1446px) {
+  html {
+    font-size: calc(var(--font-base) - 7%);
+  }
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===========================
+   🎨 Layout Principal com Grid
+=========================== */
+.top-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content";
+}
+
+@media (min-width: 992px) {
+  .top-container {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "header content";
+  }
+}
+
+/* ===========================
+   🏠 Header (Imagem de Fundo)
+=========================== */
+.header {
+  grid-area: header;
+  height: clamp(300px, 65vh, 700px);
+  background-image: url("./../assets/images/mobile-image-hero-1.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+@media (min-width: 520px) and (max-width: 992px) {
+  .header {
+    background-size: cover;
+  }
+}
+
+@media (min-width: 992px) {
+  .header {
+    background-image: url("./../assets/images/desktop-image-hero-1.jpg");
+    height: 80vh;
+  }
+}
+
+/* ===========================
+   🔗 Menu de Navegação
+=========================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 1001;
+}
+
+.logo img {
+  width: clamp(80px, 10vw, 120px);
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+  font-weight: 600;
+}
+
+/* ===========================
+   📸 Botões do Slider
+=========================== */
+.slider-controls {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  z-index: 10;
+  width: auto; 
+  height: auto;
+}
+
+.slider-controls button {
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 101px;
+  height: 101px;
+  transition: background-color 0.3s ease;
+}
+
+.slider-controls button img {
+  width: 20px;  
+  height: auto;
+}
+
+.slider-controls button:first-child {
+  border-right: 1px solid #444;
+}
+
+@media (min-width: 992px) {
+  .slider-controls {
+    bottom: 0rem;
+    right: -5.6rem;
+    transform: none;
+  }
+}
+
+.slider-controls button:active {
+  background-color: #777;
+}
+
+/* ===========================
+   📝 Título e Descrição
+=========================== */
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.title-heading {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 700;
+}
+
+.description {
+  padding: 1rem 0;
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  color: #a1a1a1;
+  font-weight: 500;
+}
+
+.shop-link {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #000;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.arrow-icon {
+  width: 2rem;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* ===========================
+   🛋️ Seção "Sobre"
+=========================== */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-areas: "image1 text image2";
+  align-items: stretch;
+  min-height: 100%;
+}
+
+/* ===========================
+   🖼️ Ajuste das Imagens
+=========================== */
+.dark-img, .light-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.light-img img, .dark-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ===========================
+   📝 Ajustes no Texto
+=========================== */
+.about-furniture {
+  grid-area: text;
+  padding: 3rem 2rem;
+  max-width: 750px;
+  text-align: center;
+  align-self: center;
+  margin: 0 auto;
+}
+
+.about-furniture h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.about-furniture p {
+  color: #454545;
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+}

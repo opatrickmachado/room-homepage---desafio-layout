@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+
+    <!-- Reset CSS default styles -->
+    <link rel="stylesheet" href="css/reset-style.css">
+
+    <!-- CSS Main File -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <title>Room homepage</title>
+
+    <style>
+        html {
+            --font-base: 100%;
+            font-size: var(--font-base);
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="top-container">
+        <header class="header container">
+            <nav class="navbar">
+
+                <a class="logo">
+                    <img src="assets/images/logo.svg" alt="logo">
+                </a>
+
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a class="nav-link" href="#">home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">shop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">about</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Botões de navegação do slider -->
+            <div class="slider-controls">
+                <button id="prevSlide">
+                    <img src="assets/images/icon-angle-left.svg" alt="Previous">
+                </button>
+                <button id="nextSlide">
+                    <img src="assets/images/icon-angle-right.svg" alt="Next">
+                </button>
+            </div>
+        </header>
+
+        <article class="title container">
+            <h1 class="title-heading">Discover innovative ways to decorate</h1>
+            <p class="description">
+                We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of
+                you and what you love.
+            </p>
+
+            <a class="shop-link" href="#">
+                shop now <img class="arrow-icon" src="assets/images/icon-arrow.svg" alt="arrow">
+            </a>
+        </article>
+    </section>
+
+    <main>
+        <section class="about">
+            <div class="dark-img">
+                <img src="assets/images/image-about-dark.jpg" alt="about image dark">
+            </div>
+
+            <div class="about-furniture container">
+                <h2>about our furniture</h2>
+                <p>
+                    Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best expresses your interests and what inspires you. Find the furniture pieces you need, from traditional to contemporary
+                    styles or anything in between. Product specialists are available to help you create your dream space.
+                </p>
+            </div>
+
+            <div class="light-img">
+                <img src="assets/images/image-about-light.jpg" alt="about image dark">
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js" type="text/javascript"></script>
+</body>
+
+</html>
